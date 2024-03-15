@@ -6,7 +6,7 @@
     "scripts": {
         "compile": "tsc",
         "dev": "tsc --watch & nodemon dist/app.js",
-        "start": "node dist/app.js",
+        "start": "npm run compile && node dist/app.js",
         "test": "jest"
     },
     "keywords": [],
@@ -19,5 +19,8 @@
         "prettier": "3.2.5",
         "ts-jest": "^29.1.2",
         "typescript": "^5.4.2"
+    },
+    "dependencies": {
+        "io-ts": "^2.2.21"
     }
 }
