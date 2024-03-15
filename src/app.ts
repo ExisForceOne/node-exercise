@@ -1,19 +1,14 @@
 import { EventParser } from './services/eventParser';
-import { matches } from './mockedData/matches';
+import { matches } from './mockedData/data';
 
-let matchesParsed = [];
+const eventParser = new EventParser();
 
-for (var i = 0; i < matches.length; i++) {
-    let parser = new EventParser();
-    let name = parser.makeEventName(matches[i]);
-    let score = parser.formatScore(matches[i]);
+const filteredMatches = eventParser.filterSupportedMatches(matches);
+const result = filteredMatches.map(match => {
+    return {
+        name: eventParser.makeEventName(match),
+        score: eventParser.formatScore(match),
+    };
+});
 
-    if (name !== 'Exception: invalid sport' && score !== 'Exception: invalid sport') {
-        matchesParsed.push({
-            name,
-            score,
-        });
-    }
-}
-
-console.log(matchesParsed);
+console.log(result);
