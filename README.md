@@ -1,6 +1,41 @@
 # node-exercise
 
-#### Assumptions
+Tested on node v20.5.0. Starting snipped was also running without issues.
+Maybe i overengineered in some places but I assumed that I was in a middle of bigger environment. ;)
+
+## Setup
+
+Install all dependencies.
+
+```bash
+npm i
+```
+
+## Development
+
+Compile and run code on changes for development.
+
+```bash
+npm run dev
+```
+
+## Start
+
+Compile and run code.
+
+```bash
+npm run start
+```
+
+## Testing
+
+Run unit tests.
+
+```bash
+npm run test
+```
+
+## Assumptions
 
 -   You have to refactor code in app.js file. Change it, split it, improve it, do it your own way!
 -   You can use version of node you prefer
